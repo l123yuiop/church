@@ -8,3 +8,13 @@ D:\Microsoft Visual Studio project\church\church\obj\Debug\church.exe
 D:\Microsoft Visual Studio project\church\church\obj\Debug\church.pdb
 D:\Microsoft Visual Studio project\church\church\obj\Debug\church.frmMain.resources
 D:\Microsoft Visual Studio project\church\church\obj\Debug\church.frmAboutMe.resources
+D:\visual Studio project\church\church\bin\Debug\church.exe.config
+D:\visual Studio project\church\church\bin\Debug\church.exe
+D:\visual Studio project\church\church\bin\Debug\church.pdb
+D:\visual Studio project\church\church\obj\Debug\church.csprojResolveAssemblyReference.cache
+D:\visual Studio project\church\church\obj\Debug\church.frmAboutMe.resources
+D:\visual Studio project\church\church\obj\Debug\church.frmMain.resources
+D:\visual Studio project\church\church\obj\Debug\church.Properties.Resources.resources
+D:\visual Studio project\church\church\obj\Debug\church.csproj.GenerateResource.Cache
+D:\visual Studio project\church\church\obj\Debug\church.exe
+D:\visual Studio project\church\church\obj\Debug\church.pdb

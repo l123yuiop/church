@@ -56,13 +56,17 @@
             // 
             // frmAboutMe
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(394, 371);
             this.Controls.Add(this.txtMsg);
             this.Controls.Add(this.btnOK);
             this.Font = new System.Drawing.Font("標楷體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmAboutMe";
+            this.ShowIcon = false;
             this.Text = "關於我";
             this.Load += new System.EventHandler(this.frmAboutMe_Load);
             this.ResumeLayout(false);
