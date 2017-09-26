@@ -31,9 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mnuset = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnubtnCreate = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnubtnModify = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnubtndelete = new System.Windows.Forms.ToolStripMenuItem();
             this.mnutxtMsg = new System.Windows.Forms.ToolStripTextBox();
             this.mnubtnAboutme = new System.Windows.Forms.ToolStripMenuItem();
             this.chkname = new System.Windows.Forms.CheckBox();
@@ -68,31 +65,9 @@
             // 
             // mnuset
             // 
-            this.mnuset.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnubtnCreate,
-            this.mnubtnModify,
-            this.mnubtndelete});
             this.mnuset.Name = "mnuset";
-            this.mnuset.Size = new System.Drawing.Size(44, 23);
-            this.mnuset.Text = "設定";
-            // 
-            // mnubtnCreate
-            // 
-            this.mnubtnCreate.Name = "mnubtnCreate";
-            this.mnubtnCreate.Size = new System.Drawing.Size(124, 22);
-            this.mnubtnCreate.Text = "新增樂譜";
-            // 
-            // mnubtnModify
-            // 
-            this.mnubtnModify.Name = "mnubtnModify";
-            this.mnubtnModify.Size = new System.Drawing.Size(124, 22);
-            this.mnubtnModify.Text = "修改樂譜";
-            // 
-            // mnubtndelete
-            // 
-            this.mnubtndelete.Name = "mnubtndelete";
-            this.mnubtndelete.Size = new System.Drawing.Size(124, 22);
-            this.mnubtndelete.Text = "刪除樂譜";
+            this.mnuset.Size = new System.Drawing.Size(68, 23);
+            this.mnuset.Text = "修改資料";
             // 
             // mnutxtMsg
             // 
@@ -112,7 +87,7 @@
             // 
             this.chkname.AutoSize = true;
             this.chkname.Location = new System.Drawing.Point(10, 46);
-            this.chkname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkname.Margin = new System.Windows.Forms.Padding(2);
             this.chkname.Name = "chkname";
             this.chkname.Size = new System.Drawing.Size(60, 16);
             this.chkname.TabIndex = 1;
@@ -123,7 +98,7 @@
             // txtname
             // 
             this.txtname.Location = new System.Drawing.Point(68, 43);
-            this.txtname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtname.Margin = new System.Windows.Forms.Padding(2);
             this.txtname.Name = "txtname";
             this.txtname.Size = new System.Drawing.Size(123, 22);
             this.txtname.TabIndex = 2;
@@ -131,7 +106,7 @@
             // txtband
             // 
             this.txtband.Location = new System.Drawing.Point(68, 76);
-            this.txtband.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtband.Margin = new System.Windows.Forms.Padding(2);
             this.txtband.Name = "txtband";
             this.txtband.Size = new System.Drawing.Size(123, 22);
             this.txtband.TabIndex = 4;
@@ -140,7 +115,7 @@
             // 
             this.chkband.AutoSize = true;
             this.chkband.Location = new System.Drawing.Point(10, 79);
-            this.chkband.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkband.Margin = new System.Windows.Forms.Padding(2);
             this.chkband.Name = "chkband";
             this.chkband.Size = new System.Drawing.Size(60, 16);
             this.chkband.TabIndex = 3;
@@ -152,7 +127,7 @@
             // 
             this.chktune.AutoSize = true;
             this.chktune.Location = new System.Drawing.Point(196, 45);
-            this.chktune.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chktune.Margin = new System.Windows.Forms.Padding(2);
             this.chktune.Name = "chktune";
             this.chktune.Size = new System.Drawing.Size(60, 16);
             this.chktune.TabIndex = 5;
@@ -163,7 +138,7 @@
             // txtsong
             // 
             this.txtsong.Location = new System.Drawing.Point(256, 76);
-            this.txtsong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtsong.Margin = new System.Windows.Forms.Padding(2);
             this.txtsong.Name = "txtsong";
             this.txtsong.Size = new System.Drawing.Size(123, 22);
             this.txtsong.TabIndex = 8;
@@ -172,7 +147,7 @@
             // 
             this.chksong.AutoSize = true;
             this.chksong.Location = new System.Drawing.Point(196, 79);
-            this.chksong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chksong.Margin = new System.Windows.Forms.Padding(2);
             this.chksong.Name = "chksong";
             this.chksong.Size = new System.Drawing.Size(60, 16);
             this.chksong.TabIndex = 7;
@@ -187,7 +162,7 @@
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView1.Location = new System.Drawing.Point(0, 121);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
@@ -198,7 +173,7 @@
             // btnsearch
             // 
             this.btnsearch.Location = new System.Drawing.Point(449, 76);
-            this.btnsearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnsearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnsearch.Name = "btnsearch";
             this.btnsearch.Size = new System.Drawing.Size(87, 29);
             this.btnsearch.TabIndex = 10;
@@ -210,7 +185,7 @@
             // 
             this.chknumber.AutoSize = true;
             this.chknumber.Location = new System.Drawing.Point(384, 43);
-            this.chknumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chknumber.Margin = new System.Windows.Forms.Padding(2);
             this.chknumber.Name = "chknumber";
             this.chknumber.Size = new System.Drawing.Size(60, 16);
             this.chknumber.TabIndex = 11;
@@ -236,7 +211,7 @@
             "G",
             "Gb(F#)"});
             this.cmbtune.Location = new System.Drawing.Point(256, 43);
-            this.cmbtune.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbtune.Margin = new System.Windows.Forms.Padding(2);
             this.cmbtune.Name = "cmbtune";
             this.cmbtune.Size = new System.Drawing.Size(122, 20);
             this.cmbtune.TabIndex = 13;
@@ -286,7 +261,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmMain";
@@ -317,9 +292,6 @@
         private System.Windows.Forms.CheckBox chksong;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnsearch;
-        private System.Windows.Forms.ToolStripMenuItem mnubtnCreate;
-        private System.Windows.Forms.ToolStripMenuItem mnubtnModify;
-        private System.Windows.Forms.ToolStripMenuItem mnubtndelete;
         private System.Windows.Forms.CheckBox chknumber;
         private System.Windows.Forms.ComboBox cmbtune;
         private System.Windows.Forms.ComboBox cmbnumber;

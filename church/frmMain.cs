@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;  // use accdb form access
+using System.Data.SqlClient; //use 
 namespace church
 {
     public partial class frmMain : Form
@@ -17,7 +18,8 @@ namespace church
             InitializeComponent();
         }
 
-        string mdbPath = Application.StartupPath + @"\..\..\mdb\chord.accdb";
+        string dbPath = Application.StartupPath + @"\data\mdb\chord.mdb";
+        
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -32,30 +34,13 @@ namespace church
             //disabled search word of song mode
             chksong.Enabled = false;
 
-            //check access database path  Spectrum
-            MessageBox.Show("hello world");
-            mnutxtMsg.Text = mdbPath;
+            string cn = "Provider = Microsoft.Jet.OLEDB.4.0;Data Source = " + dbPath;
 
-            string cn = "Provider = Microsoft.ACE.OLEDB.12.0;Data Source = " + mdbPath;
             OleDbConnection db = new OleDbConnection(cn);
-            try
-            {
-                db.Open();
-                MessageBox.Show("mdb open success");
-            }
-            catch (OleDbException ex)
-            {
-                MessageBox.Show( ex.ToString(), "OleDbException error", MessageBoxButtons.OK);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show( ex.ToString(), "Exception error", MessageBoxButtons.OK);
-            }
-            OleDbDataAdapter ap = new OleDbDataAdapter("SELECT * FROM Spectrum", db);
-            DataSet ds = new DataSet();
-            ap.Fill(ds, "歌譜");
-            dataGridView1.DataSource = ds.Tables["歌譜"];
-            
+            db.Open();
+            MessageBox.Show(db.DataSource, "資料來源");
+            db.Close();
+
 
         }
 
