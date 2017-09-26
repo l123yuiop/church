@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mnuset = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,13 +40,12 @@
             this.txtband = new System.Windows.Forms.TextBox();
             this.chkband = new System.Windows.Forms.CheckBox();
             this.chktune = new System.Windows.Forms.CheckBox();
-            this.txtsong = new System.Windows.Forms.TextBox();
-            this.chksong = new System.Windows.Forms.CheckBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnsearch = new System.Windows.Forms.Button();
             this.chknumber = new System.Windows.Forms.CheckBox();
             this.cmbtune = new System.Windows.Forms.ComboBox();
             this.cmbnumber = new System.Windows.Forms.ComboBox();
+            this.btnreset = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -73,8 +74,7 @@
             // 
             this.mnutxtMsg.Enabled = false;
             this.mnutxtMsg.Name = "mnutxtMsg";
-            this.mnutxtMsg.Size = new System.Drawing.Size(400, 23);
-            this.mnutxtMsg.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mnutxtMsg.Size = new System.Drawing.Size(600, 23);
             // 
             // mnubtnAboutme
             // 
@@ -135,32 +135,27 @@
             this.chktune.UseVisualStyleBackColor = true;
             this.chktune.CheckedChanged += new System.EventHandler(this.chktune_CheckedChanged);
             // 
-            // txtsong
-            // 
-            this.txtsong.Location = new System.Drawing.Point(256, 76);
-            this.txtsong.Margin = new System.Windows.Forms.Padding(2);
-            this.txtsong.Name = "txtsong";
-            this.txtsong.Size = new System.Drawing.Size(123, 22);
-            this.txtsong.TabIndex = 8;
-            // 
-            // chksong
-            // 
-            this.chksong.AutoSize = true;
-            this.chksong.Location = new System.Drawing.Point(196, 79);
-            this.chksong.Margin = new System.Windows.Forms.Padding(2);
-            this.chksong.Name = "chksong";
-            this.chksong.Size = new System.Drawing.Size(60, 16);
-            this.chksong.TabIndex = 7;
-            this.chksong.Text = "找歌詞";
-            this.chksong.UseVisualStyleBackColor = true;
-            this.chksong.CheckedChanged += new System.EventHandler(this.chksong_CheckedChanged);
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowDrop = true;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Location = new System.Drawing.Point(0, 121);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
@@ -184,7 +179,7 @@
             // chknumber
             // 
             this.chknumber.AutoSize = true;
-            this.chknumber.Location = new System.Drawing.Point(384, 43);
+            this.chknumber.Location = new System.Drawing.Point(195, 78);
             this.chknumber.Margin = new System.Windows.Forms.Padding(2);
             this.chknumber.Name = "chknumber";
             this.chknumber.Size = new System.Drawing.Size(60, 16);
@@ -198,19 +193,19 @@
             this.cmbtune.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbtune.FormattingEnabled = true;
             this.cmbtune.Items.AddRange(new object[] {
-            "A",
-            "Ab(G#)",
-            "B",
-            "Bb(A#)",
             "C",
-            "D",
             "Db(C#)",
-            "E",
+            "D",
             "Eb(D#)",
+            "E",
             "F",
+            "Gb(F#)",
             "G",
-            "Gb(F#)"});
-            this.cmbtune.Location = new System.Drawing.Point(256, 43);
+            "Ab(G#)",
+            "A",
+            "Bb(A#)",
+            "B"});
+            this.cmbtune.Location = new System.Drawing.Point(273, 42);
             this.cmbtune.Margin = new System.Windows.Forms.Padding(2);
             this.cmbtune.Name = "cmbtune";
             this.cmbtune.Size = new System.Drawing.Size(122, 20);
@@ -234,10 +229,21 @@
             "11",
             "12",
             "other"});
-            this.cmbnumber.Location = new System.Drawing.Point(449, 41);
+            this.cmbnumber.Location = new System.Drawing.Point(273, 75);
             this.cmbnumber.Name = "cmbnumber";
             this.cmbnumber.Size = new System.Drawing.Size(121, 20);
             this.cmbnumber.TabIndex = 14;
+            // 
+            // btnreset
+            // 
+            this.btnreset.Location = new System.Drawing.Point(449, 37);
+            this.btnreset.Margin = new System.Windows.Forms.Padding(2);
+            this.btnreset.Name = "btnreset";
+            this.btnreset.Size = new System.Drawing.Size(87, 29);
+            this.btnreset.TabIndex = 15;
+            this.btnreset.Text = "回首頁";
+            this.btnreset.UseVisualStyleBackColor = true;
+            this.btnreset.Click += new System.EventHandler(this.btnreset_Click);
             // 
             // frmMain
             // 
@@ -245,13 +251,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(884, 562);
+            this.Controls.Add(this.btnreset);
             this.Controls.Add(this.cmbnumber);
             this.Controls.Add(this.cmbtune);
             this.Controls.Add(this.chknumber);
             this.Controls.Add(this.btnsearch);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.txtsong);
-            this.Controls.Add(this.chksong);
             this.Controls.Add(this.chktune);
             this.Controls.Add(this.txtband);
             this.Controls.Add(this.chkband);
@@ -288,13 +293,12 @@
         private System.Windows.Forms.TextBox txtband;
         private System.Windows.Forms.CheckBox chkband;
         private System.Windows.Forms.CheckBox chktune;
-        private System.Windows.Forms.TextBox txtsong;
-        private System.Windows.Forms.CheckBox chksong;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnsearch;
         private System.Windows.Forms.CheckBox chknumber;
         private System.Windows.Forms.ComboBox cmbtune;
         private System.Windows.Forms.ComboBox cmbnumber;
+        private System.Windows.Forms.Button btnreset;
     }
 }
 
