@@ -18,3 +18,7 @@ D:\visual Studio project\church\church\obj\Debug\church.Properties.Resources.res
 D:\visual Studio project\church\church\obj\Debug\church.csproj.GenerateResource.Cache
 D:\visual Studio project\church\church\obj\Debug\church.exe
 D:\visual Studio project\church\church\obj\Debug\church.pdb
+D:\visual Studio project\church\church\bin\Debug\church.exe.manifest
+D:\visual Studio project\church\church\bin\Debug\church.application
+D:\visual Studio project\church\church\obj\Debug\church.exe.manifest
+D:\visual Studio project\church\church\obj\Debug\church.application

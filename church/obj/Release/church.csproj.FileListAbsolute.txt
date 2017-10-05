@@ -1,0 +1,13 @@
+D:\visual Studio project\church\church\bin\Release\church.exe.config
+D:\visual Studio project\church\church\bin\Release\church.exe.manifest
+D:\visual Studio project\church\church\bin\Release\church.application
+D:\visual Studio project\church\church\bin\Release\church.exe
+D:\visual Studio project\church\church\bin\Release\church.pdb
+D:\visual Studio project\church\church\obj\Release\church.frmAboutMe.resources
+D:\visual Studio project\church\church\obj\Release\church.frmMain.resources
+D:\visual Studio project\church\church\obj\Release\church.Properties.Resources.resources
+D:\visual Studio project\church\church\obj\Release\church.csproj.GenerateResource.Cache
+D:\visual Studio project\church\church\obj\Release\church.exe.manifest
+D:\visual Studio project\church\church\obj\Release\church.application
+D:\visual Studio project\church\church\obj\Release\church.exe
+D:\visual Studio project\church\church\obj\Release\church.pdb
