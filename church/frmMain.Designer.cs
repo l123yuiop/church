@@ -46,6 +46,8 @@
             this.cmbtune = new System.Windows.Forms.ComboBox();
             this.cmbnumber = new System.Windows.Forms.ComboBox();
             this.btnreset = new System.Windows.Forms.Button();
+            this.cmbspeed = new System.Windows.Forms.ComboBox();
+            this.chkspeed = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -69,6 +71,7 @@
             this.mnuset.Name = "mnuset";
             this.mnuset.Size = new System.Drawing.Size(68, 23);
             this.mnuset.Text = "修改資料";
+            this.mnuset.Click += new System.EventHandler(this.mnuset_Click);
             // 
             // mnutxtMsg
             // 
@@ -167,7 +170,7 @@
             // 
             // btnsearch
             // 
-            this.btnsearch.Location = new System.Drawing.Point(449, 76);
+            this.btnsearch.Location = new System.Drawing.Point(545, 79);
             this.btnsearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnsearch.Name = "btnsearch";
             this.btnsearch.Size = new System.Drawing.Size(87, 29);
@@ -236,7 +239,7 @@
             // 
             // btnreset
             // 
-            this.btnreset.Location = new System.Drawing.Point(449, 37);
+            this.btnreset.Location = new System.Drawing.Point(443, 79);
             this.btnreset.Margin = new System.Windows.Forms.Padding(2);
             this.btnreset.Name = "btnreset";
             this.btnreset.Size = new System.Drawing.Size(87, 29);
@@ -245,12 +248,42 @@
             this.btnreset.UseVisualStyleBackColor = true;
             this.btnreset.Click += new System.EventHandler(this.btnreset_Click);
             // 
+            // cmbspeed
+            // 
+            this.cmbspeed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbspeed.FormattingEnabled = true;
+            this.cmbspeed.Items.AddRange(new object[] {
+            "90↓(BPM)",
+            "90~109(BPM)",
+            "110~129(BPM)",
+            "130~149(BPM)",
+            "150↑(BPM)"});
+            this.cmbspeed.Location = new System.Drawing.Point(510, 41);
+            this.cmbspeed.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbspeed.Name = "cmbspeed";
+            this.cmbspeed.Size = new System.Drawing.Size(122, 20);
+            this.cmbspeed.TabIndex = 17;
+            // 
+            // chkspeed
+            // 
+            this.chkspeed.AutoSize = true;
+            this.chkspeed.Location = new System.Drawing.Point(433, 44);
+            this.chkspeed.Margin = new System.Windows.Forms.Padding(2);
+            this.chkspeed.Name = "chkspeed";
+            this.chkspeed.Size = new System.Drawing.Size(60, 16);
+            this.chkspeed.TabIndex = 16;
+            this.chkspeed.Text = "找速度";
+            this.chkspeed.UseVisualStyleBackColor = true;
+            this.chkspeed.CheckedChanged += new System.EventHandler(this.chkspeed_CheckedChanged);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(884, 562);
+            this.Controls.Add(this.cmbspeed);
+            this.Controls.Add(this.chkspeed);
             this.Controls.Add(this.btnreset);
             this.Controls.Add(this.cmbnumber);
             this.Controls.Add(this.cmbtune);
@@ -299,6 +332,8 @@
         private System.Windows.Forms.ComboBox cmbtune;
         private System.Windows.Forms.ComboBox cmbnumber;
         private System.Windows.Forms.Button btnreset;
+        private System.Windows.Forms.ComboBox cmbspeed;
+        private System.Windows.Forms.CheckBox chkspeed;
     }
 }
 

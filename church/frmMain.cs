@@ -38,7 +38,8 @@ namespace church
             cmbtune.SelectedIndex = 0;
             cmbnumber.Enabled = false;
             cmbnumber.SelectedIndex = 0;
-
+            cmbspeed.Enabled = false;
+            cmbspeed.SelectedIndex = 0;
 
             //db connection
             db.createdb();
@@ -49,12 +50,7 @@ namespace church
 
         }
 
-        private void mnubtnAboutme_Click(object sender, EventArgs e)
-        {
-            frmAboutMe frm = new frmAboutMe();
-            frm.Show();
-            
-        }
+
 
 
         //check change 
@@ -128,11 +124,31 @@ namespace church
                 //    btnsearch.Enabled = false;
             }
         }
+        private void chkspeed_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkspeed.Checked == true)
+            {
+                cmbspeed.Enabled = true;
+                check_cnt++;
+                //if (check_cnt == 1)
+                //    btnspeed.Enabled = true;
+            }
+            else
+            {
+                cmbspeed.Enabled = false;
+                check_cnt--;
+                //if (check_cnt == 0)
+                //    btnspeed.Enabled = false;
+            }
+        }
+
 
         private void btnsearch_Click(object sender, EventArgs e)
         {
             bool firstFlag = false;
             string sqlcmd = "SELECT * FROM sq WHERE";
+
+            //check search source
             if (chkname.Checked)
             {
                 if (!firstFlag)
@@ -218,19 +234,67 @@ namespace church
             }
             if (chknumber.Checked)
             {
-                if (!firstFlag)
+                if (cmbnumber.Text != "other")
                 {
-                    firstFlag = true;
-                    sqlcmd += " (字數 = " + cmbnumber.Text + ")";
+                    if (!firstFlag)
+                    {
+                        firstFlag = true;
+                        sqlcmd += " (字數 = " + cmbnumber.Text + ")";
+                    }
+                    else
+                    {
+                        sqlcmd += " AND (字數 = " + cmbnumber.Text + ")";
+                    }
                 }
                 else
                 {
-                    sqlcmd += " AND (字數 = " + cmbnumber.Text + ")";
-
+                    if (!firstFlag)
+                    {
+                        firstFlag = true;
+                        sqlcmd += " (字數  > 12)";
+                    }
+                    else
+                    {
+                        sqlcmd += " AND (字數  > 12)";
+                    }
                 }
-
             }
+            if (chkspeed.Checked)
+            {
+                string speed = "";
+                switch (cmbspeed.SelectedIndex)
+                {
+                    case 0:
+                        speed = " (速度 < 90 )";
+                        break;
+                    case 1:
+                        speed = " (速度 >= 90 AND 速度 < 110)";
+                        break;
+                    case 2:
+                        speed = " (速度 >= 110 AND 速度 < 130)";
+                        break;
+                    case 3:
+                        speed = " (速度 >= 130 AND 速度 < 150)";
+                        break;
+                    case 4:
+                        speed = " (速度 >= 150 )";
+                        break;
+                    default:
+                        MessageBox.Show("速度選項有誤", "速度搜尋");
+                        break;
+                }
+                if (!firstFlag)
+                {
 
+                    firstFlag = true;
+                    sqlcmd +=  speed;
+                }
+                else
+                {
+                    sqlcmd += " AND  " + speed;
+                }
+                MessageBox.Show(speed, "速度搜尋");
+            }
 
             if (firstFlag)
             {
@@ -259,5 +323,16 @@ namespace church
             dataGridView1.DataSource = db.ds.Tables["sq"];
         }
 
+        private void mnuset_Click(object sender, EventArgs e)
+        {
+            frmedit frm = new frmedit();
+            frm.Show();
+        }
+        private void mnubtnAboutme_Click(object sender, EventArgs e)
+        {
+            frmAboutMe frm = new frmAboutMe();
+            frm.Show();
+
+        }
     }
 }

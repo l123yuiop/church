@@ -57,6 +57,13 @@ namespace church
                 return false;
             }
         }
+        public void closedb()
+        {
+            if (connectionFlag)
+            {
+                 dbconnection.Close();
+            }
+        }
         /*************************************/
         
             
@@ -75,6 +82,66 @@ namespace church
                 catch (InvalidOperationException ex)
                 {
                     MessageBox.Show(ex.Message, "dbcmd");
+                    return false;
+                }
+            }
+            else
+                return false;
+        }
+        public bool dbstore(string name,string number, string set, string tune,string band, string speed)
+        {
+            if (connectionFlag)
+            {
+                //command
+                try
+                {
+                    OleDbCommand cmd = new OleDbCommand();
+                    
+                    cmd.Connection = dbconnection;
+                    cmd.CommandText = "SELECT MAX (隨機碼) FROM sq";
+                    OleDbDataReader dr = cmd.ExecuteReader();
+                    dr.Read();
+                    string gar = dr[0].ToString();
+                    dr.Close();
+                    cmd.Parameters.AddWithValue("@gar", int.Parse(gar));
+                    cmd.Parameters.AddWithValue("@name", name);
+                    cmd.Parameters.AddWithValue("@number", number);
+                    cmd.Parameters.AddWithValue("@set", int.Parse(set));
+                    cmd.Parameters.AddWithValue("@tune", tune);
+                    cmd.Parameters.AddWithValue("@band", band);
+                    cmd.Parameters.AddWithValue("@speed", int.Parse(speed));
+                    cmd.CommandText = "INSERT INTO sq(隨機碼,字數,編碼,歌名,樂團,曲調,速度) VALUES(@gar,@number,@set,@name,@band,@tune,@speed);";
+
+                   cmd.ExecuteNonQuery();
+                    return true;
+                }
+                catch (InvalidOperationException ex)
+                {
+                    MessageBox.Show(ex.Message, "dbstore");
+                    return false;
+                }
+            }
+            else
+                return false;
+        }
+        public bool dbtest(string sqlcmd)
+        {
+            if (connectionFlag)
+            {
+                //command
+                try
+                {
+                    OleDbCommand cmd = new OleDbCommand();
+
+                    cmd.Connection = dbconnection;
+                    cmd.CommandText = sqlcmd;
+
+                    cmd.ExecuteNonQuery();
+                    return true;
+                }
+                catch (InvalidOperationException ex)
+                {
+                    MessageBox.Show(ex.Message, "dbstore");
                     return false;
                 }
             }
@@ -102,5 +169,6 @@ namespace church
             else
                 return false;
         }
+
     }
 }

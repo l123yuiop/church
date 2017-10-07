@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="church.exe" size="380872">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="church.exe" size="388040">
       <assemblyIdentity name="church" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Ta6FeVVp/zELMaMjDNUo/FwSAbvwIRy4WLKzqYY5wXA=</dsig:DigestValue>
+        <dsig:DigestValue>9NkCZUj8BM7Rfzxc6t5AvisqPa2JriYnCPLD7u2I80g=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

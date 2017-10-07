@@ -22,3 +22,4 @@ D:\visual Studio project\church\church\bin\Debug\church.exe.manifest
 D:\visual Studio project\church\church\bin\Debug\church.application
 D:\visual Studio project\church\church\obj\Debug\church.exe.manifest
 D:\visual Studio project\church\church\obj\Debug\church.application
+D:\visual Studio project\church\church\obj\Debug\church.frmedit.resources
